@@ -16,7 +16,7 @@ def read_write():
     for j, k in dict_file.items():
         with open('new_file.txt', 'a', encoding='utf-8') as file:
             file.write('\nНазвание файла: ' + k[1] + '\n')
-            file.write('Ноличество строк: ' + str(j) + '\n')
+            file.write('Количество строк: ' + str(j) + '\n')
             file.writelines(k[0])
 
 
