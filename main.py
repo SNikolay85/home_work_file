@@ -17,12 +17,12 @@ def read_recipes(file_path):
                 file.readline()
             except ValueError:
                 break
-    #pprint.pprint(cook_book, width=100, sort_dicts=False) для первой задачи
+    #pprint.pprint(cook_book, width=100, sort_dicts=False) для первой части задачи
     return cook_book
 
-#read_recipes('recipes.txt') для первой задачи
+#read_recipes('recipes.txt') для первой части задачи
 
-cook_book = read_recipes('recipes.txt')
+cook_book = read_recipes('recipes.txt')   # начало второй части задания
 
 def get_shop_list_by_dishes(dishes, person_count):
     new = {}
@@ -37,7 +37,7 @@ def get_shop_list_by_dishes(dishes, person_count):
                     new[d['ingredient_name']] = {'measure': d['measure'], 'quantity': a[1] + (person_count * int(d['quantity']))}
     pprint.pprint(new, width=100, sort_dicts=False)
 
-get_shop_list_by_dishes(['Фахитос', 'Омлет'], 3)
+get_shop_list_by_dishes(['Запеченный картофель', 'Омлет'], 3)
 
 
 
